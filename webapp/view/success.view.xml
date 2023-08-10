@@ -1,0 +1,256 @@
+<!-- <mvc:View controllerName="sfactor.controller.success"
+     displayBlock="true"
+   
+    xmlns:l="sap.ui.layout"
+	xmlns:mvc="sap.ui.core.mvc"
+	xmlns:core="sap.ui.core"
+	xmlns="sap.m">
+    <Page id="page" title="{i18n>title}" >
+        <content >
+
+
+        <FlexBox id="_IDGenFlexBox1" class="cls_flx" alignContent="Center"  >
+      <VBox id="_IDGenHBox1" >
+        <VBox id="_IDGenVBox1" class="cls_vbox1" >
+        
+        <Text id="_IDGenText1" text="Personal Information" ></Text>
+        <Label id="_IDGenLabel01" text="First Name" ></Label>
+        <Input id="_IDGenInput11" type="Text"></Input>
+        <Label id="_IDGenLabel" text="Middel Name" ></Label>
+        <Input id="_IDGenInput2" type="Text"></Input>
+        <Label id="_IDGenLabel2" text="Last Name" ></Label>
+        <Input id="_IDGenInput3" type="Text"></Input>
+        <Label id="_IDGenLabel12" text="Gender" ></Label>
+       	<Select id="_IDGenSelect1" width="255px"
+					forceSelection="false"
+          items="{/Picklist('Gender')/picklistOptions}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem1" key="Gender" text="{externalCode}" />
+				</Select>
+        <Label id="_IDGenLabel15" text="Date of Birth" ></Label>
+        <DatePicker
+					id="DP17"
+					calendarWeekNumbering="MiddleEastern"
+					class="sapUiSmallMarginBottom"/>
+        <Label id="_IDGenLabel18" text="Nationality" ></Label>
+        <Select id="_IDGenSelect12" width="255px"
+					forceSelection="false"
+          items="{/Country}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem12" key="IN" text="{externalName_en_US}" />
+					<!-- <core:ListItem id="_IDGenListItem22" key="AM" text="American" /> -->
+				</Select>
+        <Label id="_IDGenLabel155" text="Native Prefared language" ></Label>
+        <Select id="_IDGenSelect51" width="255px"
+					forceSelection="false"
+          items="{path: 'languageModel>/language'}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem14" key="lang" text="{languageModel>languageName}" />
+					<!-- <core:ListItem id="_IDGenListItem28" key="EN" text="English" /> -->
+				</Select>
+        <Label id="_IDGenLabel1" text="Country of Birth" ></Label>
+        <Select id="_IDGenSelect18" width="255px"
+					forceSelection="false"
+          items="{path: 'countryModel>/country'}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem145" key="IN" text="{countryModel>CountryName}" />
+					<!-- <core:ListItem id="_IDGenListItem25" key="JR" text="America" /> -->
+				</Select>
+        
+        
+        </VBox>
+        <VBox id="_IDGenVBox4" >
+
+        <VBox id="_IDGenVBox2" class="cls_vbox2" >
+        <Text id="_IDGenText2" text="Address"></Text>
+        <Label id="_IDGenLabel85" text="Street And House No" ></Label>
+        <Input id="_IDGenInput112" type="Text"></Input>
+        <Label id="_IDGenLabel012" text="Extra Address Line" ></Label>
+        <Input id="_IDGenInput115" type="Text"></Input>
+        <Label id="_IDGenLabel01658" text="Suburb" ></Label>
+        <Input id="_IDGenInput1185" type="Text"></Input>
+        <Label id="_IDGenLabel0165" text="City" ></Label>
+        <Input id="_IDGenInput11858" type="Text"></Input>
+        <Label id="_IDGenLabel016" text="Postal Code" ></Label>
+        <Input id="_IDGenInput1188" type="Text"></Input>
+        <Label id="_IDGenLabel0166" text="Country" ></Label>
+         <Select id="_IDGenSelect122" width="255px"
+					forceSelection="false"
+          items="{path: 'countryModel>/country'}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem122" key="IN" text="{countryModel>CountryCode}: {countryModel>CountryName}" />
+					<!-- <core:ListItem id="_IDGenListItem222" key="AM" text="American" /> -->
+				</Select>
+
+        </VBox>
+        <VBox id="_IDGenVBox3" class="cls_vbox3" >
+        <Text id="_IDGenText3" text="Communication Details"></Text>
+        <Label id="_IDGenLabel852" text="Email" ></Label>
+        <Input id="_IDGenInput1122" type="Email"></Input>
+        <Label id="_IDGenLabel858" text="Phone No." ></Label>
+        <Input id="_IDGenInput1124" type="Number"></Input>
+       
+
+        </VBox></VBox>
+        <VBox id="_IDGenVBox25" class="cls_vbox4" >
+        <Text id="_IDGenText27" text="Employment Information"></Text>
+        
+        <Label id="_IDGenLabel01666" text="Positon" ></Label>
+         <Select id="_IDGenSelect1225" width="255px"
+					forceSelection="false"
+          items="{/Position}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem1202" key="Position" text="{code}: {positionTitle}" />
+					<!-- <core:ListItem id="_IDGenListItem2022" key="AM" text="Intern" /> -->
+				</Select>
+
+
+          <Label id="_IDGenLabel8520" text="Company" ></Label>
+        <Input id="_IDGenInput11202" type="Text"></Input> 
+        <Label id="_IDGenLabel85200" text="Business Unit Divison" ></Label>
+        <Input id="_IDGenInput112002" type="Text"></Input> 
+         <Label id="_IDGenLabel852000" text="Department" ></Label>
+        <Input id="_IDGenInput112000002" type="Text"></Input>  
+        <Label id="_IDGenLabel8520000" text="Job Classifiction" ></Label>
+        <Input id="_IDGenInput1120002" type="Text"></Input>  
+         <Label id="_IDGenLabel85200000" text="Cost Center" ></Label>
+        <Input id="_IDGenInput11200002" type="Text"></Input>  
+        <Label id="_IDGenLabel016606" text="Pay Scale Type" ></Label>
+         <Select id="_IDGenSelect01225" width="255px"
+					forceSelection="false"
+          items="{/EmpJob}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem120002" key="IN" text="{payScaleType}" />
+					<!-- <core:ListItem id="_IDGenListItem20022" key="AM" text="I" /> -->
+				</Select>
+        <Label id="_IDGenLabel0106606" text="Pay Scale Area" ></Label>
+         <Select id="_IDGenSelect001225" width="255px"
+					forceSelection="false"
+          items="{/EmpJob}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem12002" key="IN" text="{payScaleArea}" />
+					<!-- <core:ListItem id="_IDGenListItem20022" key="AM" text="I" /> -->
+				</Select>
+        <Label id="_IDGenLabel01066506" text="Location" ></Label>
+         <Select id="_IDGenSelec5t001225" width="255px"
+					forceSelection="false"
+          items="{/Picklist('job_location')/picklistOptions}"
+					
+					change="onChange"
+					liveChange="onLiveChange">
+					<core:ListItem id="_IDGenListItem15777772002" key="IN" text="{externalCode}" />
+					<!-- <core:ListItem id="_IDGenListItem20022" key="AM" text="I" /> -->
+				</Select>
+
+
+        <!-- </VBox></VBox> -->
+        
+        </FlexBox>
+
+        
+
+        
+        
+        </content>
+    </Page>
+</mvc:View>
+
+<!-- <FlexBox id="_IDGenFlexBox1" class="cls_flx"> -->
+
+		<!-- <VBox id="_IDGenVBox1" >
+			<FlexBox id="_IDGenFlexBox2" class="flx">
+
+			<l:VerticalLayout id="_IDGenVerticalLayout1">
+				<u:FileUploader
+					id="fileUploader"
+					name="myFileUpload"
+					uploadUrl="upload/"
+					tooltip="Upload your file to the local server"
+					uploadComplete="handleUploadComplete"/>
+				<HBox id="_IDGenHBox1">	
+				<Button id="_IDGenButton1"
+					text="Upload File"
+					class="button8"
+					press="handleUploadPress"/>
+
+					
+					<Button id="_IDGenBu8tton1"
+					text="Validate File"
+					class="button7"
+					press="handleUploadPres"/></HBox>
+			</l:VerticalLayout>
+			
+			</FlexBox>
+			<FlexBox id="_IDGenFlexBox3" class="table_flx" >
+				<Table items="{tableData>/}"
+		
+					id="table0"
+					mode="MultiSelect"  >
+
+
+						<columns>
+
+
+							<Column id="column0">
+								<Text id="_IDGenText1" text="Code"></Text>
+
+
+							</Column>
+							<Column id="column50">
+								<Text id="_IDGen5Text1" text="Start Date"></Text>
+
+
+							</Column>
+							<Column id="column505">
+								<Text id="_IDGen55Tex5t1" text="Position Title"></Text>
+
+
+							</Column><Column id="column2505">
+								<Text id="_IDGen55T4ext1" text="Job Title"></Text>
+
+
+							</Column><Column id="column5055">
+								<Text id="_IDGen55T9ext1" text="Company Name"></Text>
+
+
+							</Column>
+							
+							
+							</columns>
+							 <items>
+                  <ColumnListItem id="_IDGenColumnListItem1">
+                    <cells>
+                      <!-- <ObjectIdentifier id="_IDGenObjectIdentifier1" title="{tableData>customer}" text="{tableData>customer}" /> -->
+                        <Text id="_IDGenText2" text="{tableData>Code}" />
+                        <Text id="_IDGenText3" text="{tableData>Start Date}" />
+                        <Text id="_IDGenText53" text="{tableData>Position Title}" />
+                        <Text id="_IDGenText73" text="{tableData>Job Title}" />
+                        <Text id="_IDGenText773" text="{tableData>Company Name}" />
+                    </cells>
+                  </ColumnListItem>
+                </items>
+							
+							</Table>
+				
+	        </FlexBox></VBox>
+        
+	
+	
+	</FlexBox> -->
+ -->
